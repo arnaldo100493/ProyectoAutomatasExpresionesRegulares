@@ -31,8 +31,8 @@ public class FacesUtil {
 
     /**
      *
-     * Muestra un mensaje con el tipo de alerta de informacion por defecto en la pagina sin
-     * detalles.
+     * Muestra un mensaje con el tipo de alerta de informacion por defecto en la
+     * pagina sin detalles.
      *
      * @param message: Representa el mensaje a mostrar.
      *
@@ -43,7 +43,8 @@ public class FacesUtil {
 
     /**
      *
-     * Muestra un mensaje con el tipo de alerta de informacion en la pagina por defecto con detalles.
+     * Muestra un mensaje con el tipo de alerta de informacion en la pagina por
+     * defecto con detalles.
      *
      * @param message: Representa el mensaje a mostrar.}
      * @param details: Representa los posibles detalles del mensaje a mostrar

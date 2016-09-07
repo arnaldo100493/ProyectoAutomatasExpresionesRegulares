@@ -12,7 +12,7 @@ import com.regex.modelo.Estudiante;
  * @author ArnaldoAndres
  */
 public interface InterfaceControlEstudiante {
-    
-   public boolean registrar(Estudiante estudiante) throws Exception;    
-    
+
+    public boolean registrar(Estudiante estudiante) throws Exception;
+
 }
