@@ -10,73 +10,78 @@
 
         <ui:composition template="./layout/layout.xhtml">
 
-            <h2>Registro de Estudiantes</h2>
-            <hr/>
-            <h:form id="formRegistrarEstudiante" class="formulario">
-                <!--<p:messages id="mensajeGeneral" showDetail="true" autoUpdate="true" closable="true"/>-->
-                <p:growl id="mensajeGeneral" showDetail="true" sticky="false"/>
+            <ui:define name="top">   
+            </ui:define>
 
-                <h:panelGrid id="panelRegistrarEstudiante" columns="3">
+            <ui:define name="content">
+                <h2>Registro de Estudiantes</h2>
+                <hr/>
+                <h:form id="formRegistrarEstudiante" class="formulario">
+                    <!--<p:messages id="mensajeGeneral" showDetail="true" autoUpdate="true" closable="true"/>-->
+                    <p:growl id="mensajeGeneral" showDetail="true" sticky="false"/>
 
-                    <p:outputLabel id="labelNombre" for="textNombre" value="Nombre"/>
-                    <p:inputText id="textNombre" label="Nombre" size="50" value="#{managedBeanEstudiante.estudiante.nombre}">
-                        <f:validator validatorId="validatorVacio"/>
-                        <f:validator validatorId="validatorNombre"/>
-                    </p:inputText>
-                    <p:message id="mensajeNombre" for="textNombre"/>
+                    <h:panelGrid id="panelRegistrarEstudiante" columns="3">
 
-                    <p:outputLabel id="labelCodigo" for="textCodigo" value="Codigo"/>
-                    <p:inputText id="textCodigo" label="Codigo" size="50" value="#{managedBeanEstudiante.estudiante.codigo}">
-                        <f:validator validatorId="validatorVacio"/>
-                        <f:validator validatorId="validatorCodigo"/>
-                    </p:inputText>
-                    <p:message id="mensajeCodigo" for="textCodigo"/>
+                        <p:outputLabel id="labelNombre" for="textNombre" value="Nombre"/>
+                        <p:inputText id="textNombre" label="Nombre" size="50" value="#{managedBeanEstudiante.estudiante.nombre}">
+                            <f:validator validatorId="validatorVacio"/>
+                            <f:validator validatorId="validatorNombre"/>
+                        </p:inputText>
+                        <p:message id="mensajeNombre" for="textNombre"/>
 
-                    <!--<p:outputLabel id="labelFechaIngreso" for="textFechaIngreso" value="Fecha de ingreso"/>
-                    <p:inputText id="textFechaIngreso" label="Fecha de ingreso" size="50" title="Ejemplo: dd/mm/yyyy" value="#{managedBeanEstudiante.estudiante.fechaIngreso}">
-                        <f:validator validatorId="validatorVacio"/>
-                        <f:validator validatorId="validatorFechaIngreso"/>
-                    </p:inputText>
-                    <h:panelGroup>
-                        <p:tooltip id="tooltipFechaIngreso" for="textFechaIngreso" showEvent="focus" hideEvent="blur"/>
-                        <p:message id="mensajeFechaIngreso" for="textFechaIngreso"/>  
-                    </h:panelGroup>-->
+                        <p:outputLabel id="labelCodigo" for="textCodigo" value="Codigo"/>
+                        <p:inputText id="textCodigo" label="Codigo" size="50" value="#{managedBeanEstudiante.estudiante.codigo}">
+                            <f:validator validatorId="validatorVacio"/>
+                            <f:validator validatorId="validatorCodigo"/>
+                        </p:inputText>
+                        <p:message id="mensajeCodigo" for="textCodigo"/>
 
-                    <!--<p:outputLabel id="labelDireccion" for="textDireccion" value="Direccion"/>
-                    <p:inputText id="textDireccion" label="Direccion" size="50" value="#{managedBeanEstudiante.estudiante.direccion}">
-                        <f:validator validatorId="validatorVacio"/>
-                        <f:validator validatorId="validatorDireccion"/>
-                    </p:inputText>
-                    <p:message id="mensajeDireccion" for="textDireccion"/>-->
+                        <!--<p:outputLabel id="labelFechaIngreso" for="textFechaIngreso" value="Fecha de ingreso"/>
+                        <p:inputText id="textFechaIngreso" label="Fecha de ingreso" size="50" title="Ejemplo: dd/mm/yyyy" value="#{managedBeanEstudiante.estudiante.fechaIngreso}">
+                            <f:validator validatorId="validatorVacio"/>
+                            <f:validator validatorId="validatorFechaIngreso"/>
+                        </p:inputText>
+                        <h:panelGroup>
+                            <p:tooltip id="tooltipFechaIngreso" for="textFechaIngreso" showEvent="focus" hideEvent="blur"/>
+                            <p:message id="mensajeFechaIngreso" for="textFechaIngreso"/>  
+                        </h:panelGroup>-->
 
-                    <p:outputLabel id="labelTelefonoFijo" for="textTelefonoFijo" value="Teléfono fijo"/>
-                    <p:inputText id="textTelefonoFijo" label="Teléfono fijo" size="50" value="#{managedBeanEstudiante.estudiante.telefonoFijo}">
-                        <f:validator validatorId="validatorVacio"/>
-                        <f:validator validatorId="validatorTelefonoFijo"/>
-                    </p:inputText>
-                    <p:message id="mensajeTelefonoFijo" for="textTelefonoFijo"/>
+                        <!--<p:outputLabel id="labelDireccion" for="textDireccion" value="Direccion"/>
+                        <p:inputText id="textDireccion" label="Direccion" size="50" value="#{managedBeanEstudiante.estudiante.direccion}">
+                            <f:validator validatorId="validatorVacio"/>
+                            <f:validator validatorId="validatorDireccion"/>
+                        </p:inputText>
+                        <p:message id="mensajeDireccion" for="textDireccion"/>-->
 
-                    <p:outputLabel id="labelTelefonoCelular" for="textTelefonoCelular" value="Teléfono celular"/>
-                    <p:inputText id="textTelefonoCelular" label="Teléfono celular" size="50" value="#{managedBeanEstudiante.estudiante.telefonoCelular}">
-                        <f:validator validatorId="validatorVacio"/>
-                        <f:validator validatorId="validatorTelefonoCelular"/>
-                    </p:inputText>
-                    <p:message id="mensajeTelefonoCelular" for="textTelefonoCelular"/>
+                        <p:outputLabel id="labelTelefonoFijo" for="textTelefonoFijo" value="Teléfono fijo"/>
+                        <p:inputText id="textTelefonoFijo" label="Teléfono fijo" size="50" value="#{managedBeanEstudiante.estudiante.telefonoFijo}">
+                            <f:validator validatorId="validatorVacio"/>
+                            <f:validator validatorId="validatorTelefonoFijo"/>
+                        </p:inputText>
+                        <p:message id="mensajeTelefonoFijo" for="textTelefonoFijo"/>
 
-                    <!--<p:outputLabel id="labelCorreoElectronico" for="textCorreoElectronico" value="Correo electrónico"/>
-                    <p:inputText id="textCorreoElectronico" label="Correo electrónico" size="50" title="Ejemplo: ejemplo@hotmail.com" value="#{managedBeanEstudiante.estudiante.correoElectronico}">
-                        <f:validator validatorId="validatorVacio"/>
-                        <f:validator validatorId="validatorEmail"/>
-                    </p:inputText>
-                    <h:panelGroup>
-                        <p:tooltip id="tooltipCorreoElectronico" for="textCorreoElectronico" showEvent="focus" hideEvent="blur"/>
-                        <p:message id="mensajeCorreoElectronico" for="textCorreoElectronico"/>  
-                    </h:panelGroup>-->
+                        <p:outputLabel id="labelTelefonoCelular" for="textTelefonoCelular" value="Teléfono celular"/>
+                        <p:inputText id="textTelefonoCelular" label="Teléfono celular" size="50" value="#{managedBeanEstudiante.estudiante.telefonoCelular}">
+                            <f:validator validatorId="validatorVacio"/>
+                            <f:validator validatorId="validatorTelefonoCelular"/>
+                        </p:inputText>
+                        <p:message id="mensajeTelefonoCelular" for="textTelefonoCelular"/>
 
-                    <h:panelGroup></h:panelGroup>
-                    <p:commandButton id="buttonRegistrarEstudiante" value="Registrar estudiante" ajax="false" actionListener="#{managedBeanEstudiante.registrar()}" update="formRegistrarEstudiante"/> 
-                </h:panelGrid>
-            </h:form>
+                        <!--<p:outputLabel id="labelCorreoElectronico" for="textCorreoElectronico" value="Correo electrónico"/>
+                        <p:inputText id="textCorreoElectronico" label="Correo electrónico" size="50" title="Ejemplo: ejemplo@hotmail.com" value="#{managedBeanEstudiante.estudiante.correoElectronico}">
+                            <f:validator validatorId="validatorVacio"/>
+                            <f:validator validatorId="validatorEmail"/>
+                        </p:inputText>
+                        <h:panelGroup>
+                            <p:tooltip id="tooltipCorreoElectronico" for="textCorreoElectronico" showEvent="focus" hideEvent="blur"/>
+                            <p:message id="mensajeCorreoElectronico" for="textCorreoElectronico"/>  
+                        </h:panelGroup>-->
+
+                        <h:panelGroup></h:panelGroup>
+                        <p:commandButton id="buttonRegistrarEstudiante" value="Registrar estudiante" ajax="false" actionListener="#{managedBeanEstudiante.registrar()}" update="formRegistrarEstudiante"/> 
+                    </h:panelGrid>
+                </h:form>
+
             </ui:define>
 
             <ui:define name="bottom">
