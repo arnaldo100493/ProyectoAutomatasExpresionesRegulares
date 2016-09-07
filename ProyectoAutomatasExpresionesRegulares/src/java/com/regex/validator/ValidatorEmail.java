@@ -29,7 +29,7 @@ public class ValidatorEmail implements Validator {
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         String label = "";
-        String regex = "([a-zA-Z0-9\\.\\/-_]+\\@[a-zA-Z-]+\\.[a-zA-Z]+)*";
+        String regex = "[a-zA-Z0-9]+[-_.]*[a-zA-Z0-9]+\\@[a-zA-Z]+\\.[a-zA-Z]+";
         HtmlInputText htmlInputText = (HtmlInputText) component;
 
         if (htmlInputText.getLabel() == null || htmlInputText.getLabel().trim().equals("")) {
