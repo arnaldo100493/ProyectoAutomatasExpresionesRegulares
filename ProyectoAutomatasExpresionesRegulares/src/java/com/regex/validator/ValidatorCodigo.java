@@ -29,7 +29,7 @@ public class ValidatorCodigo implements Validator {
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         String label = "";
-        String regex = "[^0][0-9]{7}";
+        String regex = "[1-9][0-9]{7}";
         HtmlInputText htmlInputText = (HtmlInputText) component;
 
         if (htmlInputText.getLabel() == null || htmlInputText.getLabel().trim().equals("")) {

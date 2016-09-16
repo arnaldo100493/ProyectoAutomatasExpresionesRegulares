@@ -18,7 +18,7 @@
                 <hr/>
                 <h:form id="formRegistrarEstudiante" class="formulario">
                     <!--<p:messages id="mensajeGeneral" showDetail="true" autoUpdate="true" closable="true"/>-->
-                    <p:growl id="mensajeGeneral" showDetail="true" sticky="false"/>
+                    <!--<p:growl id="mensajeGeneral" showDetail="true" sticky="false"/>-->
 
                     <h:panelGrid id="panelRegistrarEstudiante" columns="3">
 
@@ -68,7 +68,7 @@
                         <p:message id="mensajeTelefonoCelular" for="textTelefonoCelular"/>
 
                         <p:outputLabel id="labelCorreoElectronico" for="textCorreoElectronico" value="Correo electrónico"/>
-                        <p:inputText id="textCorreoElectronico" label="Correo electrónico" size="50" title="Ejemplo: ejemplo@hotmail.com" value="#{managedBeanEstudiante.estudiante.correoElectronico}">
+                        <p:inputText id="textCorreoElectronico" label="Correo electrónico" size="50" title="Ejemplo: ejemplo@ejemplo.com" value="#{managedBeanEstudiante.estudiante.correoElectronico}">
                             <f:validator validatorId="validatorVacio"/>
                             <f:validator validatorId="validatorEmail"/>
                         </p:inputText>

@@ -29,7 +29,7 @@ public class ValidatorFechaIngreso implements Validator {
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         String label = "";
-        String regex = "[0-9]{2}\\-[0-9]{2}\\-[0-9]{4}";
+        String regex = "[0-9]{2}\\/[0-9]{2}\\/[0-9]{4}";
         HtmlInputText htmlInputText = (HtmlInputText) component;
 
         if (htmlInputText.getLabel() == null || htmlInputText.getLabel().trim().equals("")) {

@@ -29,7 +29,7 @@ public class ValidatorDireccion implements Validator {
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         String label = "";
-        String regex = "";
+        String regex = "([a-z A-Z 0-9]+[#-.][0-9]{1,3})?([a-z A-Z 0-9])?([a-z A-Z]+[.][a-z A-Z 0-9])?";
         HtmlInputText htmlInputText = (HtmlInputText) component;
 
         if (htmlInputText.getLabel() == null || htmlInputText.getLabel().trim().equals("")) {
